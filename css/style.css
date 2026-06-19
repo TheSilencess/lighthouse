@@ -372,3 +372,62 @@ body {
     .footer-grid { grid-template-columns: 1fr; }
     .hero-buttons { flex-direction: column; }
 }
+
+/* NUEVA SECCIÓN ORACIÓN - ESTILO EXACTO A image_e9b07e.png */
+.oracion-section {
+    background-color: #000000; /* Fondo totalmente negro */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.oracion-content h2 {
+    font-family: var(--fuente-principal); /* Fuente sans-serif gruesa */
+    font-weight: 800;
+    font-size: 3rem; /* Tamaño grande e imponente */
+    color: #ffffff;
+    letter-spacing: 4px; /* Espaciado entre letras */
+    margin-bottom: 30px;
+}
+
+/* Botón Dorado específico de Oración */
+.btn-oracion-gold {
+    display: inline-block;
+    background-color: #d19b43; /* Tono ocre/dorado de la imagen */
+    color: #ffffff;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 40px;
+    text-decoration: none;
+    border-radius: 0px; /* Bordes completamente rectos como la imagen */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-oracion-gold:hover {
+    background-color: #bfa034;
+    transform: scale(1.02);
+}
+
+/* Estilo para el botón del menú de navegación actualizado */
+.btn-oracion {
+    border: 1px solid var(--color-gold);
+    padding: 6px 15px;
+    border-radius: 4px;
+    color: var(--color-gold) !important;
+}
+.btn-oracion:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg) !important;
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .oracion-content h2 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    .btn-oracion-gold {
+        font-size: 0.95rem;
+        padding: 12px 25px;
+    }
+}

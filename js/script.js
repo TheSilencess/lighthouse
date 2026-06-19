@@ -1,4 +1,4 @@
-// Manejo del menú desplegable para dispositivos móviles
+
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -7,14 +7,12 @@ mobileMenu.addEventListener('click', () => {
     mobileMenu.classList.toggle('is-active');
 });
 
-// Cerrar menú al hacer click en cualquier link de navegación
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
     });
 });
 
-// Cambiar estado activo en el Header según el Scroll del usuario
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
