@@ -630,3 +630,176 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* ==========================================
+   ESTILOS: REUNIONES (image_7906e7.png)
+   ========================================== */
+.schedule-grid {
+    display: grid;
+    /* Crea columnas adaptables de mínimo 300px que llenan el espacio de forma inteligente */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.schedule-card {
+    background: #ffffff;
+    padding: 45px 30px;
+    border-radius: 6px; /* Borde sutil como la imagen */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra suave idéntica */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.schedule-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Tarjeta destacada oscura de la imagen */
+.schedule-card.highlighted {
+    background-color: #1f2833; /* Gris oscuro profundo */
+    color: #ffffff;
+}
+
+.schedule-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Etiqueta pequeña para identificar la sede del evento */
+.sede-tag {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.schedule-card.highlighted .sede-tag {
+    color: #c5a880; /* Asegurar contraste en la oscura */
+}
+
+.schedule-card .time {
+    color: #c5a880; /* Dorado para la hora */
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.schedule-card.highlighted .time {
+    color: #c5a880;
+}
+
+.schedule-card .details {
+    font-size: 0.9rem;
+    color: #5a6573;
+    line-height: 1.5;
+}
+
+.schedule-card.highlighted .details {
+    color: #a9b3c4; /* Texto secundario claro */
+}
+
+/* Centrado automático cuando quedan elementos guérfanos en la última línea */
+@media (min-width: 992px) {
+    .schedule-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   ESTILOS: REUNIONES (image_7902c8.png Centrado)
+   ========================================== */
+.schedule-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; /* Centra las tarjetas excedentes de la última fila */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-card {
+    background: #ffffff;
+    padding: 45px 30px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* Configuración para simular 3 columnas exactas restando el espacio del gap */
+    width: calc(33.333% - 20px); 
+    min-width: 320px; /* Evita que colapsen en pantallas medianas */
+}
+
+.schedule-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Tarjeta destacada oscura */
+.schedule-card.highlighted {
+    background-color: #1f2833;
+    color: #ffffff;
+}
+
+.schedule-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Etiqueta de la sede del evento */
+.sede-tag {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.schedule-card.highlighted .sede-tag {
+    color: #c5a880;
+}
+
+.schedule-card .time {
+    color: #c5a880;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.schedule-card .details {
+    font-size: 0.9rem;
+    color: #5a6573;
+    line-height: 1.5;
+}
+
+.schedule-card.highlighted .details {
+    color: #a9b3c4;
+}
+
+/* ==========================================
+   Ajuste Responsivo para Dispositivos Móviles
+   ========================================== */
+@media (max-width: 992px) {
+    .schedule-card {
+        /* En pantallas medianas o pequeñas pasan a ocupar todo el ancho disponible de forma individual */
+        width: 100%; 
+    }
+}
