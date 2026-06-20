@@ -431,3 +431,202 @@ body {
         padding: 12px 25px;
     }
 }
+
+/* ==========================================
+   ESTILOS: SECCIÓN PASTORES (image_bf7c6c.jpg)
+   ========================================== */
+.pastores-section {
+    background-color: #000000; /* Fondo negro absoluto */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.pastores-header {
+    margin-bottom: 60px;
+}
+
+.subtitulo-pastores {
+    display: block;
+    color: #c5a880; /* Dorado institucional */
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.titulo-pastores {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.pastores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pastor-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pastor-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forzar contenedores perfectamente cuadrados */
+    background-color: #1a1a1a; /* Fondo de carga antes de poner la foto */
+}
+
+.pastor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto de los pastores se deforme */
+    display: block;
+}
+
+/* Recuadro flotante traslúcido idéntico a la referencia */
+.pastor-info-overlay {
+    position: absolute;
+    bottom: 40px; /* Separado del borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.55); /* Capa gris/negra translúcida */
+    backdrop-filter: blur(4px);
+    padding: 15px 35px;
+    width: 75%;
+    max-width: 320px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pastor-info-overlay .cargo {
+    display: block;
+    color: #ffffff;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    opacity: 0.9;
+}
+
+.pastor-info-overlay .nombre {
+    display: block;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   ESTILOS: SECCIÓN SEDES
+   ========================================== */
+.sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.sede-card {
+    background-color: #ffffff;
+    border: 1px solid #eef2f5;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sede-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.sede-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f4f6f9;
+    color: #c5a880;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 20px;
+}
+
+.sede-card h3 {
+    font-size: 1.4rem;
+    color: #1f2833;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.sede-direccion {
+    font-size: 0.95rem;
+    color: #5a6573;
+    margin-bottom: 25px;
+    min-height: 48px; /* Mantener alineados los botones si el texto varía */
+}
+
+.sede-direccion i {
+    color: #c5a880;
+    margin-right: 5px;
+}
+
+.btn-link {
+    color: #c5a880;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.btn-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #1f2833;
+}
+
+.btn-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================== */
+@media (max-width: 768px) {
+    .pastores-grid {
+        grid-template-columns: 1fr; /* Una columna en celulares */
+        gap: 40px;
+        padding: 0 15px;
+    }
+    
+    .titulo-pastores {
+        font-size: 2.3rem;
+        letter-spacing: 3px;
+    }
+    
+    .pastor-info-overlay {
+        width: 85%;
+        bottom: 25px;
+        padding: 12px 20px;
+    }
+    
+    .pastor-info-overlay .nombre {
+        font-size: 1.1rem;
+    }
+}
